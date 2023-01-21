@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+.font_size{
+font-size: 150%;
+}
+.form{
+    flex-wrap: wrap;
+}
+.size{
+    size: 150%;
+}
+.size_small{
+    font-size: 110%;
+}
+.ask_age{
+    size: 200px;
+}
+
+.residence{
+    margin-left: 50px;
+}
+.residential{
+    font-size: 100%;
+}
+.phone{
+    margin-left: 100px;
+}
+.ext{margin-left: 30px;}
+
+.black{color: black;
+size: 125%;}
+.red{color: red;
+size: 125%;}
+.green{color: green;
+size: 125%;}
+.yellow{color: yellow;
+size: 125%;}
+.blue{color: blue;
+size: 125%;}
+.pink{color: pink;
+size: 125%;} 
+.gray{color: grey;
+size: 125%;}
+.brown{color: brown;
+size: 125%;}
+.orange{color: orange;
+size: 125%;}
+.purple{color: purple;
+size: 125%;}
+
+@media screen and (max-width:1000px) {
+    .font_size{font-size: 100%;}
+    .size{size: 80%;}
+    .size_small{size: 60%;}
+    .ask_age{size: 100px;}
+    .residence{margin-left: 15px;}
+    .phone{margin-left: 30px;}
+}
+
+@media screen and (max-width:750px) {
+    .font_size{font-size: 70%;}
+    .size{size: 60%;}
+    .size_small{size: 40%;}
+    .ask_age{size: 70px;}
+    .residence{margin-left: 7px;}
+    .phone{margin-left: 20px;}
+
+}
+
+@media screen and (max-width:500px) {
+    .font_size{font-size: 50%;}
+    .size{size: 30%;}
+    .size_small{size: 20%;}
+    .ask_age{size: 40px;}
+    .residence{margin-left: 5px;}
+    .phone{margin-left: 10px;}
+
+}
+</style>
+<script>
+</script>
+</head>
+<body>
+
+
+
+<form name="get_name" action="/blank.php" method="get" class="font_size">
+    <label for="name" class="name"><strong>Enter Full Name:</strong> </label><br>
+    <input type="name" id="name" name="name" required class="size" placeholder="First and Last"><br><br>
+</form>
+
+<form name="get_email" action="/blank.php" method="get" class="font_size">
+    <label for="email"><strong>Enter full e-mail:</strong></label><br>
+    <input type="email" id="email" name="email" required class="size" placeholder="myemail@example.com"><br><br>
+</form>
+
+<form name="get_gender" action="/blank.php" method="get" class="font_size">
+    <label for="what_gender" class="p_gender"><strong>What is your gender?</strong></label><br>
+    <input type="radio" id="male" name="what_gender" value="male" >
+    <label for="male" class="size">Male</label><br>
+    <input type="radio" id="female" name="what_gender" value="female" >
+    <label for="female" class="size">Female</label><br><br>
+</form>
+
+
+<form action="/blank.php" class="font_size">
+    <label for="age"><strong>Your Age Category:</strong> </label>
+    
+    <select id="age" name="age" class="size_small">
+      <option value="select"class="size_small">Select age group</option>
+      <option value="minor"class="size_small">Less than 18</option>
+      <option value="adult" class="size_small">18-35</option>
+      <option value="older_adult" class="size_small">35-60</option>
+      <option value="Senior" class="size_small">60+</option>
+
+    </select>
+</form>
+<br><br>
+
+<p class="font_size"><strong>Residence Information</strong></p>
+<form action="/blank.php" class="residential">
+
+    <label for="Address"><strong>Address:</strong></label>
+    <input type="text" id="Address" name="Address" placeholder="Your Address">
+
+    <label class="residence" for="postal_code"><strong>Postal Code:</strong> </label>
+    <input type="text" id="postal_code" name="postal_code" placeholder="Postal Code Here" maxlength="7">
+
+    <label class="residence" for="city"><strong>City:</strong></label>
+    <input type="text" id="city" name="city" placeholder="City here">
+
+    <label class="residence" for="province"><strong>Province/State:</strong></label>
+    <input type="text" id="province" name="province" placeholder="Province/State here">
+
+    <label class="residence" for="country"><strong>Country:</strong></label>
+    <input type="text" id="country" name="country" placeholder="Country here">
+</form> 
+ <br><br>
+
+
+
+ <form>
+    <p class="font_size"><strong>Phone Number:</strong></p>
+
+    <form action="/blank.php">
+        <label for="phone_type" class="size_small"><strong> Phone # 1:</strong> </label>
+        
+        <select id="phone_type" name="phone_type" class="size">
+          <option value="select" >Select phone type</option>
+          <option value="home">Home Phome</option>
+          <option value="cell">Cell Phone</option>
+          <option value="office">Office Phone</option>
+    
+        </select>
+        <input type="text" id="phone" name="phone" placeholder="Phone Number" maxlength="12" required>
+        <input type="text" id="cell"class="ext" name="cell" placeholder="Ext." maxlength="6" required>
+
+    </form>
+<br><br>
+    <form action="/blank.php">
+        <label for="phone_type" class="size_small"><strong>Phone # 2:</strong> </label>
+        
+        <select id="phone_type" name="phone_type" class="size">
+          <option value="select">Select phone type</option>
+          <option value="home">Home Phome</option>
+          <option value="cell">Cell Phone</option>
+          <option value="office">Office Phone</option>
+    
+        </select>
+        <input type="text" id="phone" name="phone" placeholder="Phone Number" maxlength="12">
+        <input type="text" id="cell"class="ext" name="cell" placeholder="Ext." maxlength="6">
+
+    </form>
+
+</form>
+
+
+<form name="colors" action="/blank.php" method="get" class="color">
+    <label for="color" class="font_size"><strong>Please select favorite colors:</strong></label><br>
+    
+    <input type="checkbox" id="black" name="black" value="black" >
+    <label for="black" class="black">Black</label><br>
+
+    <input type="checkbox" id="red" name="red" value="red" >
+    <label for="red" class="red">Red</label><br>
+
+    <input type="checkbox" id="green" name="green" value="green" >
+    <label for="green" class="green">Green</label><br>
+
+    <input type="checkbox" id="yellow" name="yellow" value="yellow" >
+    <label for="yellow" class="yellow">Yellow</label><br>
+
+    <input type="checkbox" id="blue" name="blue" value="blue" >
+    <label for="blue" class="blue">Blue</label><br>
+
+    <input type="checkbox" id="pink" name="pink" value="pink" >
+    <label for="pink" class="pink">Pink</label><br>
+
+    <input type="checkbox" id="gray" name="gray" value="gray" >
+    <label for="gray" class="gray">Grey</label><br>
+
+    <input type="checkbox" id="brown" name="brown" value="brown" >
+    <label for="brown" class="brown">Brown</label><br>
+
+    <input type="checkbox" id="orange" name="orange" value="orange" >
+    <label for="orange" class="orange">Orange</label><br>
+
+    <input type="checkbox" id="purple" name="purple" value="purple" >
+    <label for="purple" class="purple">Purple</label>
+</form>
+
+<form action="/blank.php">
+    <p class="font_size"><strong>If you would like to submit, click "Send Request"</strong></p>
+    <input type="submit" value="Send Request" class="font_size">
+</form>
+
+</body>
+</html>
